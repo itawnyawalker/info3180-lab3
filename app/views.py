@@ -6,8 +6,9 @@ This file creates your application.
 """
 
 from unicodedata import name
-from app import app
+from app import app, mail
 from flask import render_template, request, redirect, url_for, flash
+from flask_mail import Message
 
 from app.forms import ContactForm
 
@@ -34,7 +35,14 @@ def contact():
 
     if request.method == 'POST':
         if cform.validate_on_submit():
-            flash('You have successfully filled out the form', 'success')
+            msg = Message(cform.subject.data, sender = ("Itawnya Walker", "itawnya@lab3.com" ), recipients=[cform.email.data])
+            msg.body = cform.message.data
+            mail.send(msg)
+        
+
+        flash('Email has been sucessfully sent.', 'success')
+        return redirect(url_for('home'))
+
 
     return render_template('contact.html', form=cform)
 
