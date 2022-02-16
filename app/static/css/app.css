@@ -1,3 +1,44 @@
 body {
     padding-top: 5rem;
 }
+
+.contact  {
+    font-size: 34px;
+    font-weight: bold;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.msg-field {
+    height: 150px;
+    border-radius: 5px;
+    border-color: rgb(218, 218, 218);
+    border-width: 1px 1px;
+    width: 70%;
+}
+
+.form-group p {
+    font-size: 12px;
+}
+
+.input {
+    border-radius: 3px;
+    border-color: rgb(218, 218, 218);
+    border-width: 1px;
+    height: 40px;
+    width: 70%;
+}
+
+.btn {
+    color: blue;
+    border: 10px;
+}
+
+.label{
+    font-weight: bold;
+}
