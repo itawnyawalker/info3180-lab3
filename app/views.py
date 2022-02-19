@@ -35,7 +35,7 @@ def contact():
 
     if request.method == 'POST':
         if cform.validate_on_submit():
-            msg = Message(cform.subject.data, sender = ("Itawnya Walker", "itawnya@lab3.com" ), recipients=[cform.email.data])
+            msg = Message(cform.subject.data, sender = (cform.name.data, cform.email.data ), recipients=["itawnya@lab3.com"])
             msg.body = cform.message.data
             mail.send(msg)
         

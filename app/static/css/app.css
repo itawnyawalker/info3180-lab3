@@ -2,10 +2,6 @@ body {
     padding-top: 5rem;
 }
 
-.contact  {
-    font-size: 34px;
-    font-weight: bold;
-}
 
 .form-group {
     display: flex;
@@ -20,6 +16,7 @@ body {
     border-color: rgb(218, 218, 218);
     border-width: 1px 1px;
     width: 70%;
+    font-size: 14px;
 }
 
 .form-group p {
@@ -32,13 +29,29 @@ body {
     border-width: 1px;
     height: 40px;
     width: 70%;
+    font-size: 14px;
 }
 
 .btn {
-    color: blue;
-    border: 10px;
+    color: white;
+    background-color: rgb(78, 152, 248);
 }
 
 .label{
     font-weight: bold;
+    font-size: 15px;
+}
+
+.label:after {
+    content: " (*Required)";
+    color: red;
+}
+
+.flashes{
+    color: black;
+    font-size: 20px;
+    list-style-type: none;
+    background-color: rgb(255, 0, 0, .65);
+    text-align: center;
+
 }
